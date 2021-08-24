@@ -83,9 +83,13 @@ function gameOver() {
     gameOverText.id = "game-over";
     gameOverText.innerHTML = `
         <h1> Game Over ! </h1>
-        <p> ${score} succesful clicks in ${initialTime} seconds.</p>
+        <p> ${score} successful clicks in ${initialTime} seconds.</p>
+        <button id="replay-on-screen">Replay</button>
     `
     gameScreen.append(gameOverText);
+
+    //Adding event listener to the on screen "Replay button".
+    document.getElementById("replay-on-screen").addEventListener("click", () => location.reload());
 }
 
 
